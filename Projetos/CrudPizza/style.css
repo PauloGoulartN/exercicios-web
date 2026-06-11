@@ -1,0 +1,99 @@
+/* Removemos as margens padrão e mudamos a forma como o tamanho dos elementos é calculado */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Um fundo mais suave e quente, lembrando massa de pizza */
+    background-color: #fcf4e4; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 46px;
+    color: #d32f2f; /* Vermelho tomate clássico */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Ocultando a linha horizontal, pois usaremos bordas no formulário para dar destaque */
+hr {
+    display: none;
+}
+
+/* Transformando o formulário em um "Card" moderno */
+#formPizza {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    border-top: 8px solid #d32f2f;
+}
+
+/* Estilização das Labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+h3 {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+/* Padronizando os campos de digitação e seleção */
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+    outline: none;
+    border-color: #d32f2f; /* Fica vermelho ao clicar no campo */
+}
+
+/* Ajustando o campo de data e pedido para não quebrarem o layout */
+#data, #pedido {
+    margin-left: 0;
+    width: 100%;
+}
+
+/* Estilizando os tamanhos (Radio Buttons) para ficarem em linha */
+input[type="radio"] {
+    margin-right: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+/* Ocultando quebras de linha (<br>) já que o CSS agora cuida do espaçamento */
+br {
+    display: none;
+}
+
+/* Estilo do Checkbox de entrega */
+input[type="checkbox"] {
+    margin-right: 8px
+}

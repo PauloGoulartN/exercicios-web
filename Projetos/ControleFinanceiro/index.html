@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+    <meta name="theme-color" content="#0f1117">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="layout">
+
+        <!-- COLUNA ESQUERDA -->
+        <div class="left">
+
+            <h1>💸 Controle Financeiro</h1>
+
+            <div class="card">
+
+                <label>Orçamento</label>
+                <input type="number" id="orcamento" placeholder="Ex: 2000">
+
+                <button onclick="salvarOrcamento()">
+                    Salvar orçamento
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Nova despesa</h2>
+
+                <label>Nome</label>
+                <input type="text" id="nomeDespesa" placeholder="Ex: Mercado">
+
+                <label>Valor</label>
+                <input type="number" id="valorDespesa" placeholder="Ex: 150">
+
+                <button onclick="adicionarDespesa()">
+                    Adicionar
+                </button>
+
+            </div>
+
+            <div class="resumo">
+
+                <div class="grid">
+
+                    <div class="box">
+                        <span>Orçamento</span>
+                        <strong id="orcamentoCard">R$ 0,00</strong>
+                    </div>
+
+                    <div class="box">
+                        <span>Gasto</span>
+                        <strong id="totalGasto">R$ 0,00</strong>
+                    </div>
+
+                    <div class="box">
+                        <span>Saldo</span>
+                        <strong id="saldo">R$ 0,00</strong>
+                    </div>
+
+                </div>
+
+                <div class="progress">
+                    <div id="bar"></div>
+                </div>
+
+                <p id="porcentagem">0% utilizado</p>
+
+                <p id="alerta"></p>
+
+            </div>
+
+        </div>
+
+        <!-- COLUNA DIREITA (HISTÓRICO) -->
+        <div class="right">
+
+            <h2>Histórico</h2>
+
+            <ul id="lista"></ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>- Pizzaria -</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pizzaria Mama Mia</h1>
+    <hr>
+    <form id="formPizza">
+        <label for="pedido">Pedido: </label>
+        <input type="text" id="pedido">
+        <input type="date" id="data" placeholder="Data do pedido">
+        <br>
+        <label for="cliente">Cliente: </label>
+        <input type="text" id="cliente" required>
+        <br>
+        <label for="sabor">Sabor</label>
+        <select name="sabor" id="sabor">
+            <option value="opcao">-- Escolha um sabor --</option>
+            <label for="sabor">Sabor</label>
+            <option value="calabresa">Calabresa</option>
+            <option value="portuguesa">Portuguesa</option>
+            <option value="frango">Frango</option>
+            <option value="bacon">Bacon</option>
+            <option value="pepperoni">Pepperoni</option>
+            <option value="napolitana">Napolitana</option>
+            <option value="vegetariana">Vegetariana</option>
+            <option value="quatro queijos">Quatro Queijos</option>
+            <option value="milho com bacon">Milho com Bacon</option>
+            <option value="chocolate">chocolate</option>
+        </select>
+        <h3>Tamanho: </h3>
+        <label for="grande">Grande</label>
+        <input type="radio" name="tamanho" value="Grande">
+        <label for="media">Média</label>
+        <input type="radio" name="tamanho" value="media">
+        <label for="broto">Broto</label>
+        <input type="radio" name="tamanho" value="broto">
+        <br>
+        <label for="preco">Preço</label>
+        <input type="text" id="preco" required>
+        <br>
+        <label for="entregue">Entregue</label>
+        <input type="checkbox" id="entregue">
+        <br>
+        <button type="submit" id="botao">Cadastrar</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
